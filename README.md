@@ -1,85 +1,83 @@
-# Arcana - Claude Tarot Plugin
+# Esoterica - A Grimoire for Claude Code
 
-A Claude Code plugin that provides Major Arcana tarot archetypes for symbolic and archetypal reasoning in AI agents.
+A Claude Code plugin marketplace providing esoteric tools for symbolic and archetypal reasoning in AI agents.
 
 ## Overview
 
-This plugin enables Claude agents to use the 22 Major Arcana cards from tarot as a framework for archetypal and symbolic reasoning. Agents can perform tarot spreads for multiple perspectives or ask questions to receive relevant archetypal guidance.
+Esoterica is a curated collection of Claude Code plugins that extend AI reasoning capabilities through esoteric frameworks, symbolic systems, and archetypal thinking. This grimoire serves as a marketplace for tools that help agents explore problems through non-linear, symbolic, and depth-oriented perspectives.
 
 ## Installation
 
-Install this plugin in Claude Code:
+Add the Esoterica marketplace to Claude Code:
 
 ```bash
-# From GitHub (once published)
-claude plugin install jem-computer/arcana
+# From GitHub
+/plugin marketplace add jem-computer/arcana
 
-# Or from local directory
-claude plugin install /path/to/arcana
+# Or from local directory for development
+/plugin marketplace add /path/to/arcana
 ```
 
-## Usage
+## Available Plugins
 
-Once installed, agents can access the tarot skill:
+### Tarot
 
-```markdown
-I'm using the tarot skill to gain archetypal perspective on this architecture decision.
+Access Major Arcana tarot archetypes for symbolic reasoning. Perform draws for random archetypal perspectives or ask questions to receive relevant card guidance.
 
-Performing a Three Card spread:
-- Past: The Hierophant (established patterns)
-- Present: The Tower (necessary disruption)
-- Future: The Star (emerging clarity)
+**Install:**
+```bash
+/plugin install tarot@esoterica
 ```
 
-### Two Interaction Modes
+**Features:**
+- 22 Major Arcana cards with complete archetypal wisdom
+- Multiple spread patterns (Three Card, Celtic Cross, etc.)
+- Two interaction modes: simulated draws and question-based oracle
+- Fisher-Yates shuffle algorithm for authentic randomness
 
-**1. Simulated Draws**: Perform spreads (Three Card, Celtic Cross, etc.) to explore problems through multiple archetypal lenses
-
-**2. Question-Based Oracle**: Ask specific questions and receive relevant card guidance based on thematic matching
-
-## What's Included
-
-- **22 Major Arcana Cards**: Complete archetypal wisdom for each card including:
-  - Traditional divinatory meanings
-  - Archetypal psychology
-  - Symbolic correspondences
-  - Narrative/journey context
-
-- **Tarot Spreads**: Reference guide for spread patterns including Three Card, Five Card Cross, Seven Card Horseshoe, and Celtic Cross
-
-- **Agent Instructions**: Clear guidance on when and how to use tarot for symbolic reasoning
-
-## File Structure
-
-```
-skills/tarot/
-├── SKILL.md           # Main skill file with usage instructions
-├── spreads.md         # Spread patterns and positions
-└── cards/             # Individual card files (00-21)
-```
-
-## When Agents Use This
-
-Agents use tarot for:
+**When to use:**
 - Symbolic/archetypal reasoning about complex problems
 - Exploring multiple perspectives on ambiguous situations
 - Understanding patterns and cycles
 - Creative problem-solving requiring lateral thinking
 - Framing decisions through archetypal lenses
 
-Agents do NOT use tarot for:
-- Precise technical calculations
-- Binary true/false determinations
-- Debugging code errors
-- Literal predictions
+## Marketplace Structure
+
+```
+.claude-plugin/
+  marketplace.json      # Marketplace configuration
+plugins/
+  tarot/               # Tarot plugin
+    plugin.json        # Plugin metadata
+    skills/tarot/      # Skill directory
+      SKILL.md         # Main skill instructions
+      spreads.md       # Spread patterns
+      cards/           # 22 Major Arcana cards (00-21)
+```
+
+## Future Grimoire Additions
+
+Potential esoteric plugins for this marketplace:
+
+- **I Ching**: Hexagram divination and change patterns
+- **Kabbalah**: Tree of Life pathworking and sephirotic reasoning
+- **Alchemy**: Symbolic transformation and transmutation frameworks
+- **Astrology**: Planetary archetypes and aspect patterns
+- **Runes**: Elder Futhark symbolic guidance
+
+## Philosophy
+
+This marketplace embraces the value of symbolic, non-rational, and archetypal thinking as complements to logical reasoning. These tools are not for prediction or mysticism, but for accessing different modes of pattern recognition and perspective-shifting that can illuminate complex problems in ways purely analytical approaches cannot.
 
 ## Contributing
 
-Contributions welcome! Potential areas for expansion:
-- Minor Arcana (56 cards in four suits)
-- Court Cards as character archetypes
-- Additional spread patterns
-- Deeper symbolic cross-references
+Contributions welcome! Guidelines for new plugins:
+
+- Must provide genuine reasoning value beyond novelty
+- Should have clear usage guidelines and boundaries
+- Must respect the symbolic/archetypal nature of the work
+- Should integrate cleanly with Claude Code's agent system
 
 ## License
 
@@ -87,4 +85,4 @@ MIT License - See LICENSE file for details
 
 ## Acknowledgments
 
-Tarot wisdom drawn from Rider-Waite-Smith tradition, Jungian archetypal psychology, and various esoteric traditions.
+Built on the wisdom of esoteric traditions while maintaining rigorous applicability to modern problem-solving contexts.

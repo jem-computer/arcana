@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Skill(tarot)",
+      "Read(//Users/jem/.claude/skills/tarot/cards/**)",
+      "Read(//Users/jem/.claude/skills/tarot/**)",
+      "Bash(node -e \"\nconst timestamp = Date.now();\nconst deck = Array.from({length: 22}, (_, i) => i);\n\n// Fisher-Yates shuffle with timestamp-based seed\nfor (let i = deck.length - 1; i > 0; i--) {\n  const seed = (timestamp + i) * 2654435761;\n  const j = seed % (i + 1);\n  [deck[i], deck[j]] = [deck[j], deck[i]];\n}\n\n// Draw three cards\nconsole.log(deck[0]);\nconsole.log(deck[1]);\nconsole.log(deck[2]);\n\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
