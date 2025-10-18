@@ -102,9 +102,26 @@ enables rather than limits creativity.
 ## Card Selection Methods
 
 **For Random Draws:**
-- Timestamp: `(Date.now() % 22)` gives card 0-21
-- Multiple cards: Use sequential timestamps or add position index
-- Avoid duplicates: Track drawn cards, re-roll if duplicate
+
+Use Fisher-Yates shuffle with timestamp as seed to ensure non-sequential, unique cards:
+
+```javascript
+// Create shuffled deck using timestamp as seed
+const timestamp = Date.now();
+const deck = Array.from({length: 22}, (_, i) => i);
+
+// Fisher-Yates shuffle with timestamp-based seed
+for (let i = deck.length - 1; i > 0; i--) {
+  const seed = (timestamp + i) * 2654435761; // Large prime for mixing
+  const j = seed % (i + 1);
+  [deck[i], deck[j]] = [deck[j], deck[i]];
+}
+
+// Draw cards from shuffled deck
+const card1 = deck[0];
+const card2 = deck[1];
+const card3 = deck[2];
+```
 
 **For Question-Based:**
 - Identify key themes in your question (e.g., "beginning," "transformation," "wisdom")
